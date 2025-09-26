@@ -39,7 +39,7 @@ git clone https://github.com/twentyhq/twenty.git "$dir_name"
 cd "$dir_name" || exit 1
 
 echo "⚙️ Setting up docker-compose (dev mode)..."
-cp packages/twenty-docker/docker-compose.dev.yml docker-compose.yml
+cp packages/twenty-docker/docker-compose.yml docker-compose.yml
 cp packages/twenty-docker/.env.example .env
 
 # Generate secrets
@@ -57,3 +57,4 @@ if [ "$start" != "n" ]; then
 else
   echo "✅ Setup completed. Run 'docker compose up -d' to start later."
 fi
+
